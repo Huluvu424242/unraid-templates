@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container>
+  <Name>orbitdb-backup</Name>
+  <Repository>huluvu424242/orbitdb-backup:latest</Repository>
+  <Registry>https://hub.docker.com/r/huluvu424242/orbitdb-backup</Registry>
+  <Overview>Beobachtet eine OrbitDB Instanz und pinnt neue Einträge automatisch über einen externen IPFS-Kubo-Node.</Overview>
+  <Category>Tools:Backup:IPFS</Category>
+  <Project>https://github.com/huluvu424242/orbitdb-backup</Project>
+  <Support>https://github.com/huluvu424242/orbitdb-backup/issues</Support>
+  <Description>
+    Dieses Tool überwacht eine bestehende OrbitDB-Datenbank (über einen externen IPFS-Kubo-Node)
+    und pinnt neue Einträge automatisch über die REST API des Nodes. Ideal für IPFS-basierte Backups.
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ORBITDB_ADDRESS</Name>
+      <Value>/orbitdb/your-db-address/MyDB</Value>
+      <Description>Die vollständige OrbitDB-Adresse, z. B. /orbitdb/QmABC123/MyDB</Description>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Name>IPFS_API_URL</Name>
+      <Value>http://127.0.0.1:5001</Value>
+      <Description>URL zum IPFS API Endpoint deines ipfs-kubo Containers</Description>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+  </Environment>
+  <TemplateURL>https://raw.githubusercontent.com/huluvu424242/unraid-templates/main/templates/orbitdb-backup.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/huluvu424242/unraid-templates/main/templates/icon.png</Icon>
+  <WebUI></WebUI>
+  <DonateText>Spende für das Projekt</DonateText>
+  <DonateLink>https://github.com/sponsors/huluvu424242</DonateLink>
+</Container>
