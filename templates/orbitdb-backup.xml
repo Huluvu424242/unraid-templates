@@ -8,7 +8,7 @@
   <Project>https://github.com/huluvu424242/orbitdb-backup</Project>
   <Support>https://github.com/huluvu424242/orbitdb-backup/issues</Support>
   <Description>
-    Dieses Tool überwacht eine bestehende OrbitDB-Datenbank (über einen externen IPFS-Kubo-Node)
+    Der OrbitDB Backup Replikator überwacht eine bestehende OrbitDB-Datenbank (über einen externen IPFS-Kubo-Node)
     und pinnt neue Einträge automatisch über die REST API des Nodes. Ideal für IPFS-basierte Backups.
   </Description>
   <Networking>
@@ -16,7 +16,7 @@
   </Networking>
   <Environment>
     <Variable>
-      <Name>ORBITDB_ADDRESS</Name>
+      <Name>ORBITDB_ADDR</Name>
       <Value>/orbitdb/your-db-address/MyDB</Value>
       <Description>Die vollständige OrbitDB-Adresse, z. B. /orbitdb/QmABC123/MyDB</Description>
       <Required>true</Required>
@@ -29,9 +29,14 @@
       <Required>true</Required>
       <Mask>false</Mask>
     </Variable>
+    <Variable>
+      <Name>DEBUG</Name>
+      <Value>false</Value>
+      <Description>Debug Mosw aktiv=true sonst false</Description>
+    </Variable>
   </Environment>
-  <TemplateURL>https://raw.githubusercontent.com/huluvu424242/unraid-templates/main/templates/orbitdb-backup.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/huluvu424242/unraid-templates/main/templates/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/huluvu424242/unraid-templates/master/templates/orbitdb-backup.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/huluvu424242/unraid-templates/master/templates/icon.png</Icon>
   <WebUI></WebUI>
   <DonateText>Spende für das Projekt</DonateText>
   <DonateLink>https://github.com/sponsors/huluvu424242</DonateLink>
